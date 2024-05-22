@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import db from './models/index.js';
+import cors from "cors"
 
 import userRoutes from './routes/userRoutes.js';
 import postRoutes from './routes/postRoutes.js';
@@ -11,7 +12,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use('/users', userRoutes);
