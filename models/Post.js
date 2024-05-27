@@ -1,4 +1,4 @@
-export default (sequelize, DataTypes) => {
+export default (sequelize, DataTypes, post) => {
     const post = sequelize.define('post', {
       title: DataTypes.STRING,
       content: DataTypes.STRING,
@@ -13,4 +13,3 @@ export default (sequelize, DataTypes) => {
     return post;
   };
   
-  export {post}
