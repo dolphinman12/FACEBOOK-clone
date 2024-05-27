@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
-import user from './user.js';
-import post from './post.js';
-import comment from './comment.js';
+import user from './User.js';
+import post from './Post.js';
+import comment from './Comment.js';
 import config from '../config/config.json'assert { type: "json" };
 
 const sequelize = new Sequelize(
@@ -31,5 +31,5 @@ const db = {
   db.Post.hasMany(db.Comment, { foreignKey: 'postId' });
   db.Comment.belongsTo(db.Post, { foreignKey: 'postId', as: 'post' });
   
-  export  {db,comment,post,user}
+  export {db,post,user,comment};
   
