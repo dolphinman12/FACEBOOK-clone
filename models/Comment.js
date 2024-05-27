@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    const Comment = sequelize.define('Comment', {
+    const comment = sequelize.define('comment', {
       content: DataTypes.STRING,
       postId: {
         type: DataTypes.INTEGER,
@@ -16,7 +16,7 @@ export default (sequelize, DataTypes) => {
         },
       },
     });
-    return Comment;
+    return comment;
   };
-  export {Comment}
+  export {comment}
   
