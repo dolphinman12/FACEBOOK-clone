@@ -18,5 +18,5 @@ export default (sequelize, DataTypes) => {
     });
     return Comment;
   };
-  
+  export {Comment}
   
