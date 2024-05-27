@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 import user from './User.js';
 import post from './Post.js';
 import comment from './Comment.js';
-import config from '../config/config.json';
+import config from '../config/config.json' assert { type: 'json' };
 
 const sequelize = new Sequelize(
   config.development.database,
