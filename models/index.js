@@ -31,5 +31,5 @@ const db = {
   db.Post.hasMany(db.Comment, { foreignKey: 'postId' });
   db.Comment.belongsTo(db.Post, { foreignKey: 'postId', as: 'post' });
   
-  export {db,post,user,comment};
+export default db
   
