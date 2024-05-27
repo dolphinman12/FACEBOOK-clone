@@ -9,5 +9,5 @@ export default (sequelize, DataTypes) => {
     });
     return User;
   };
-  
+  export {User}
   
