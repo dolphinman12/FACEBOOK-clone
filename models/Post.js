@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    const Post = sequelize.define('Post', {
+    const post = sequelize.define('post', {
       title: DataTypes.STRING,
       content: DataTypes.STRING,
       authorId: {
@@ -10,7 +10,7 @@ export default (sequelize, DataTypes) => {
         },
       },
     });
-    return Post;
+    return post;
   };
   
-  export {Post}
+  export {post}
