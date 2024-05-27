@@ -17,9 +17,9 @@ const sequelize = new Sequelize(
 const db = {
     sequelize,
     Sequelize,
-    User: user(sequelize, Sequelize),
-    Post: post(sequelize, Sequelize),
-    Comment: comment(sequelize, Sequelize),
+    user: user(sequelize, Sequelize),
+    post: post(sequelize, Sequelize),
+    comment: comment(sequelize, Sequelize),
   };
   
   db.User.hasMany(db.Post, { foreignKey: 'authorId' });
@@ -31,5 +31,5 @@ const db = {
   db.Post.hasMany(db.Comment, { foreignKey: 'postId' });
   db.Comment.belongsTo(db.Post, { foreignKey: 'postId', as: 'post' });
   
-  export default db;
+  export  {db,comment,post,user}
   
